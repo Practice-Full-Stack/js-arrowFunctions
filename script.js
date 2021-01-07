@@ -1,5 +1,5 @@
 /******************************
-STANDARD VS ARROW FUNCTIONS
+STANDARD VS ARROW FUNCTION
 ******************************/
 
 // add two numbers
@@ -10,25 +10,36 @@ let add = function(x,y) {
 // arrow function
 let add2 = (x,y) => (x + y);
 
-// run to to console
+// print to console
 console.log(add(5,10));
 console.log(add2(10,10));
-console.log("--------------------")
 
 /******************************
-MULTIPLE PARAMETERS
+"COMPARE FUNCTION"
 ******************************/
 
-// use a "compareFunction"
-// sort in descending order
-let numbers = [10, 30, 20];
-let myFunction = function(a,b) {
-    numbers.push(a)
-    a - b;
-    console.log(numbers);
-};
+// for ascending use the .sort() method
+let strings = ["cake", "apple", "fig", "banana"];
+console.log(strings.sort());
 
-myFunction(0, 5);
+// for descending combine with .reverse()
+let strings2 = ["cake", "apple", "banana", "fig"];
+strings2.sort();
+console.log(strings.reverse());
+
+// NUMBERS ARE HARDER
+let nums = [50, 10, 90, 20];
+nums.sort(function(a,b){
+    return b-a;
+})
+
+// console.log(nums.sort());
+
+// USE A "COMPARE FUNCTION"
+nums.push(30);
+console.log(nums);
+
+
 
 
 
